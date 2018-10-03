@@ -12,13 +12,31 @@
     </head>
     
     <body>
+        
         <?php
+        
             $_SESSION[ScumbagSteve] = 0;
             $_SESSION[BongoCat] = 0;
             $_SESSION[SlapTheCar] = 0;
             $_SESSION[MindBlown] = 0;
             
+            $value = $_POST["Color"];
             
+            switch ($value){
+                case "red": 
+                    $_SESSION[ScumbagSteve]++;
+                break;
+                case "green":
+                    $_SESSION[BongoCat]++;
+                break;
+                case "yellow":
+                    $_SESSION[SlapTheCar]++;
+                break;
+                case "blue":
+                    $_SESSION[MindBlown]++;
+                break;
+                default : echo"Error";
+            }
         ?>
     </body>
 </html>
